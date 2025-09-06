@@ -108,3 +108,9 @@ Rscript time_series_ccf_analysis.R
 Rscript time_series_ccf_plots.R
 Rscript time_series_ccf_leadlag.R
 
+```mermaid
+flowchart TD
+    A[Input Time Series CSV + Window Reference CSV] --> B[time_series_ccf_analysis.R<br/>Cross-Correlation Analysis]
+    B -->|Raw + Prewhitened CCF<br/>Reports & PNGs| C[time_series_ccf_plots.R<br/>Visualization]
+    C -->|Overlay, Raw, Lag-Aligned Plots| D[time_series_ccf_leadlag.R<br/>Slope & Event-Based Analysis]
+    D -->|Slope CCF, Event Lead-Lag<br/>Reports & PNGs| E[ccf_outputs/ Directory]
