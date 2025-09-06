@@ -104,10 +104,6 @@ install.packages(c("tidyverse", "lubridate", "zoo"))
 
 ## Suggested Usage
 
-Rscript time_series_ccf_analysis.R
-Rscript time_series_ccf_plots.R
-Rscript time_series_ccf_leadlag.R
-
 ```mermaid
 flowchart TD
     A[Input Time Series CSV + Window Reference CSV] --> B[time_series_ccf_analysis.R<br/>Cross-Correlation Analysis]
